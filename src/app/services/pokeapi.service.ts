@@ -29,7 +29,10 @@ export class PokeapiService {
           response.pokemon.forEach(pokemon => {
             pokemon.number = this.getNumberFromUrl(pokemon.resource_uri);
           })
-          this.pokemonList = this.sortPokeman(response.pokemon).filter(pokemon => pokemon.number < 50);
+          this.pokemonList = this
+            .sortPokeman(response.pokemon)
+            .filter(pokemon => pokemon.number < 50)
+            .slice(0,9);
         }
       )
   }
