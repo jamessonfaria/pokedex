@@ -4,12 +4,15 @@ import { FormsModule } from '@angular/forms';
 
 import { PokedexRoutingModule } from './pokedex-routing.module';
 import { MyNumberPipe } from './../../pipes/my-number.pipe';
-import { ListComponent } from './../../views/list/list.component';
-import { ListItemComponent } from './../../components/list-item/list-item.component';
+import { ListComponent } from './views/list/list.component';
+import { ListItemComponent } from './components/list-item/list-item.component';
+import { InformationComponent } from './views/information/information.component';
+
 
 const CompList = [
   ListItemComponent,
-  ListComponent
+  ListComponent,
+  InformationComponent
 ];
 
 @NgModule({
