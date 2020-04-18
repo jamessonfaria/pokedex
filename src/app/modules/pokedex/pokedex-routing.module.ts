@@ -1,3 +1,4 @@
+import { InformationGuard } from './../../guards/information.guard';
 import { InformationComponent } from './views/information/information.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -11,7 +12,8 @@ const routes: Routes = [
   },
   {
     path: ':number',
-    component: InformationComponent
+    component: InformationComponent,
+    canActivate: [ InformationGuard ]
   }
 ];
 
